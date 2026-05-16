@@ -31,18 +31,45 @@
 
 <body class="bg-slate-50 text-slate-800 font-sans">
 
-    <!-- Navbar: Uses brand-DEFAULT -->
+
+    <!-- Navbar -->
     <nav class="sticky top-0 bg-brand text-white p-4 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold tracking-tight text-white">Lucid Tech</a>
+            <a href="index.html" class="text-2xl font-bold tracking-tight text-white">Lucid Tech</a>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-6 font-medium">
                 <a href="index.html#services" class="hover:text-blue-200 transition">What we do</a>
                 <a href="index.html#process" class="hover:text-blue-200 transition">Our process</a>
                 <a href="index.html#contact" class="hover:text-blue-200 transition">Contact us</a>
                 <a href="about.html" class="hover:text-blue-200 transition">About Us</a>
             </div>
-            <a href="#contact"
-                class="bg-white text-brand px-5 py-2 rounded-full font-bold hover:bg-blue-50 transition">Let's Talk</a>
+
+            <!-- CTA & Mobile Button -->
+            <div class="flex items-center gap-4">
+                <a href="index.html#contact"
+                    class="hidden md:block bg-white text-brand px-5 py-2 rounded-full font-bold hover:bg-blue-50 transition">Let's
+                    Talk</a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden mt-4 flex flex-col space-y-4 bg-brand-dark p-4 rounded-xl border border-white/10">
+            <a href="index.html#services" class="block py-2 hover:text-blue-200">What we do</a>
+            <a href="index.html#process" class="block py-2 hover:text-blue-200">Our process</a>
+            <a href="index.html#contact" class="block py-2 hover:text-blue-200">Contact us</a>
+            <a href="about.html" class="block py-2 hover:text-blue-200">About Us</a>
+            <a href="index.html#contact" class="bg-white text-brand text-center py-3 rounded-full font-bold">Let's
+                Talk</a>
         </div>
     </nav>
 
@@ -57,39 +84,89 @@
             a Consultation</a>
     </header>
 
-    <!-- Services -->
-    <section id="services" class="py-20 container mx-auto px-6">
+    <!-- What We Do -->
+    <!-- <section id="services" class="py-20 container mx-auto px-6">
         <h2 class="text-4xl font-bold text-center mb-16">What We Do</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
                 <div
                     class="w-12 h-12 bg-blue-100 text-brand rounded-lg flex items-center justify-center mb-6 font-bold">
                     01</div>
-                <h3 class="text-2xl font-bold mb-3">Web Development</h3>
-                <p class="text-slate-600">Fast, responsive, and beautiful websites designed to turn visitors into loyal
-                    clients.</p>
+                <h3 class="text-2xl font-bold mb-3">Custom Software Development</h3>
+                <p class="text-slate-600">Robust engineering built for scale, security, and long-term
+                    maintainability.</p>
             </div>
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
                 <div
                     class="w-12 h-12 bg-blue-100 text-brand rounded-lg flex items-center justify-center mb-6 font-bold">
                     02</div>
-                <h3 class="text-2xl font-bold mb-3">Mobile Apps</h3>
-                <p class="text-slate-600">Native and cross-platform apps that keep your business in your customers'
-                    pockets.</p>
+                <h3 class="text-2xl font-bold mb-3">UI/UX Design</h3>
+                <p class="text-slate-600">Intuitive interfaces that prioritize user experience and conversion.</p>
             </div>
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
                 <div
                     class="w-12 h-12 bg-blue-100 text-brand rounded-lg flex items-center justify-center mb-6 font-bold">
                     03</div>
-                <h3 class="text-2xl font-bold mb-3">Cloud Consulting</h3>
-                <p class="text-slate-600">Infrastructure that scales with you, ensuring your business never misses a
+                <h3 class="text-2xl font-bold mb-3">Cloud and AI Consulting</h3>
+                <p class="text-slate-600">Solutions that scale with you, ensuring your business never misses a
                     beat.</p>
+            </div>
+        </div>
+    </section> -->
+    <!-- What We Do -->
+    <section id="services" class="py-20 container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">What We Do</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Custom Software Development -->
+            <div
+                class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition hover:shadow-lg">
+                <div class="w-16 h-16 bg-blue-50 text-brand rounded-2xl flex items-center justify-center mb-6">
+                    <!-- Code/Engineering Icon -->
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Custom Software Development</h3>
+                <p class="text-slate-600">Robust engineering built for scale, security, and long-term maintainability.
+                </p>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div
+                class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition hover:shadow-lg">
+                <div class="w-16 h-16 bg-blue-50 text-brand rounded-2xl flex items-center justify-center mb-6">
+                    <!-- Design/Interface Icon -->
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">UI/UX Design</h3>
+                <p class="text-slate-600">Intuitive interfaces that prioritize user experience and conversion.</p>
+            </div>
+
+            <!-- Cloud and AI Consulting -->
+            <div
+                class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition hover:shadow-lg">
+                <div class="w-16 h-16 bg-blue-50 text-brand rounded-2xl flex items-center justify-center mb-6">
+                    <!-- Cloud/AI/Network Icon -->
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Cloud and AI Consulting</h3>
+                <p class="text-slate-600">Solutions that scale with you, ensuring your business never misses a beat.</p>
             </div>
         </div>
     </section>
 
     <!-- Our Process: Uses brand-DEFAULT -->
-    <section id="process" class="py-20 bg-brand text-white">
+    <!-- <section id="process" class="py-20 bg-brand text-white">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16">Our Simple Process</h2>
             <div class="grid md:grid-cols-4 gap-8">
@@ -115,7 +192,74 @@
                 </div>
             </div>
         </div>
+    </section> -->
+    <!-- Our Process -->
+    <section id="process" class="py-20 bg-brand text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Our Simple Process</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+
+                <!-- Step 01: Discovery -->
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-white transition-colors">
+                        <svg class="w-10 h-10 text-blue-200 group-hover:text-brand" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">Discovery</h4>
+                    <p class="text-blue-100 text-sm">We listen to your goals and define the project scope.</p>
+                </div>
+
+                <!-- Step 02: Design -->
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-white transition-colors">
+                        <svg class="w-10 h-10 text-blue-200 group-hover:text-brand" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">Design</h4>
+                    <p class="text-blue-100 text-sm">Creating intuitive, user-friendly blueprints.</p>
+                </div>
+
+                <!-- Step 03: Build -->
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-white transition-colors">
+                        <svg class="w-10 h-10 text-blue-200 group-hover:text-brand" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">Build</h4>
+                    <p class="text-blue-100 text-sm">Agile development with clean, scalable code.</p>
+                </div>
+
+                <!-- Step 04: Launch -->
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-white transition-colors">
+                        <svg class="w-10 h-10 text-blue-200 group-hover:text-brand" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">Launch</h4>
+                    <p class="text-blue-100 text-sm">Deployment and ongoing support for success.</p>
+                </div>
+
+            </div>
+        </div>
     </section>
+
 
     <!-- Trust Section -->
     <section class="py-20 container mx-auto px-6 text-center">
@@ -153,6 +297,15 @@
     <footer class="py-8 bg-brand text-center text-blue-100 text-sm">
         &copy; 2026 ZYXAB Inc. All rights reserved.
     </footer>
+    <!-- Script to toggle menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>

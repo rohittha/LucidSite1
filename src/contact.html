@@ -16,12 +16,7 @@
             theme: {
                 extend: {
                     colors: {
-                        // Your custom lighter indigo
-                        brand: {
-                            DEFAULT: '#524FA1',
-                            light: '#6a67b5',
-                            dark: '#3f3d7d',
-                        },
+                        brand: { DEFAULT: '#524FA1', light: '#6a67b5', dark: '#3f3d7d' },
                     },
                 },
             },
@@ -31,21 +26,48 @@
 
 <body class="bg-slate-50 text-slate-800 font-sans">
 
-    <!-- Navbar: Uses brand-DEFAULT -->
+    <!-- Navbar -->
     <nav class="sticky top-0 bg-brand text-white p-4 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold tracking-tight text-white">Lucid Tech</a>
+            <a href="index.html" class="text-2xl font-bold tracking-tight text-white">Lucid Tech</a>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-6 font-medium">
                 <a href="index.html#services" class="hover:text-blue-200 transition">What we do</a>
                 <a href="index.html#process" class="hover:text-blue-200 transition">Our process</a>
                 <a href="index.html#contact" class="hover:text-blue-200 transition">Contact us</a>
                 <a href="about.html" class="hover:text-blue-200 transition">About Us</a>
             </div>
-            <a href="#contact"
-                class="bg-white text-brand px-5 py-2 rounded-full font-bold hover:bg-blue-50 transition">Let's Talk</a>
+
+            <!-- CTA & Mobile Button -->
+            <div class="flex items-center gap-4">
+                <a href="index.html#contact"
+                    class="hidden md:block bg-white text-brand px-5 py-2 rounded-full font-bold hover:bg-blue-50 transition">Let's
+                    Talk</a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden mt-4 flex flex-col space-y-4 bg-brand-dark p-4 rounded-xl border border-white/10">
+            <a href="index.html#services" class="block py-2 hover:text-blue-200">What we do</a>
+            <a href="index.html#process" class="block py-2 hover:text-blue-200">Our process</a>
+            <a href="index.html#contact" class="block py-2 hover:text-blue-200">Contact us</a>
+            <a href="about.html" class="block py-2 hover:text-blue-200">About Us</a>
+            <a href="index.html#contact" class="bg-white text-brand text-center py-3 rounded-full font-bold">Let's
+                Talk</a>
         </div>
     </nav>
 
+    <!-- Content remains the same -->
     <div class="min-h-screen flex items-center justify-center p-6">
         <div class="bg-white p-10 rounded-3xl shadow-xl w-full max-w-lg border border-slate-100">
             <h2 class="text-3xl font-bold text-brand mb-6 text-center">Let's Connect</h2>
@@ -61,6 +83,16 @@
             </form>
         </div>
     </div>
+
+    <!-- Script to toggle menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
