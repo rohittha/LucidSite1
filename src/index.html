@@ -85,7 +85,6 @@
     </header>
 
     <!-- What We Do -->
-    <!-- What We Do -->
     <section id="services" class="py-20 container mx-auto px-6">
         <h2 class="text-4xl font-bold text-center mb-16">What We Do</h2>
 
@@ -94,7 +93,7 @@
 
             <!-- Card 1 -->
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
-                <img src="images/software.jpg" alt="Service 1" class="w-full h-48 object-cover rounded-2xl mb-6">
+                <img src="images/software.jpg" alt="Service 1" class="w-full h-auto rounded-2xl mb-6">
                 <h3 class="text-2xl font-bold mb-3">Custom Software</h3>
                 <p class="text-slate-600">Robust engineering built for scale, security, and long-term maintainability.
                 </p>
@@ -102,21 +101,21 @@
 
             <!-- Card 2 -->
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
-                <img src="images/ux.jpg" alt="Service 2" class="w-full h-48 object-cover rounded-2xl mb-6">
+                <img src="images/ux.jpg" alt="Service 2" class="w-full h-auto rounded-2xl mb-6">
                 <h3 class="text-2xl font-bold mb-3">UI/UX Design</h3>
                 <p class="text-slate-600">Intuitive interfaces that prioritize user experience and conversion.</p>
             </div>
 
             <!-- Card 3 -->
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
-                <img src="images/ai.jpg" alt="Service 3" class="w-full h-48 object-cover rounded-2xl mb-6">
+                <img src="images/ai.jpg" alt="Service 3" class="w-full h-auto rounded-2xl mb-6">
                 <h3 class="text-2xl font-bold mb-3">AI Solutions</h3>
                 <p class="text-slate-600">Leveraging agentic AI to automate processes and unlock new value.</p>
             </div>
 
             <!-- Card 4 -->
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
-                <img src="images/cloud.jpg" alt="Service 4" class="w-full h-48 object-cover rounded-2xl mb-6">
+                <img src="images/cloud.jpg" alt="Service 4" class="w-full h-auto rounded-2xl mb-6">
                 <h3 class="text-2xl font-bold mb-3">Cloud Consulting</h3>
                 <p class="text-slate-600">Scalable cloud infrastructure ensuring your business never misses a beat.</p>
             </div>
@@ -124,34 +123,6 @@
         </div>
     </section>
 
-    <!-- Our Process: Uses brand-DEFAULT -->
-    <!-- <section id="process" class="py-20 bg-brand text-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">Our Simple Process</h2>
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl mb-4 text-blue-200 font-black">01</div>
-                    <h4 class="font-bold mb-2">Discovery</h4>
-                    <p class="text-blue-100 text-sm">We listen to your goals and define the scope.</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl mb-4 text-blue-200 font-black">02</div>
-                    <h4 class="font-bold mb-2">Design</h4>
-                    <p class="text-blue-100 text-sm">Creating intuitive, user-friendly blueprints.</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl mb-4 text-blue-200 font-black">03</div>
-                    <h4 class="font-bold mb-2">Build</h4>
-                    <p class="text-blue-100 text-sm">Agile development with clean, scalable code.</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl mb-4 text-blue-200 font-black">04</div>
-                    <h4 class="font-bold mb-2">Launch</h4>
-                    <p class="text-blue-100 text-sm">Deployment and ongoing support for success.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <!-- Our Process -->
     <section id="process" class="py-20 bg-brand text-white">
         <div class="container mx-auto px-6">
@@ -223,13 +194,25 @@
     <!-- Trust Section -->
     <section class="py-20 container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-12">Trusted Partners & Happy Clients</h2>
-        <div class="flex flex-wrap justify-center gap-8 mb-16 opacity-50 grayscale">
-            <div class="text-xl font-bold text-brand">CLIENT LOGO</div>
-            <div class="text-xl font-bold text-brand">CLIENT LOGO</div>
-            <div class="text-xl font-bold text-brand">CLIENT LOGO</div>
+
+        <!-- Logo Grid -->
+        <div
+            class="flex flex-wrap justify-center items-center gap-12 mb-16 hover:grayscale-0 transition-all duration-500">
+            <!-- Logo 1 -->
+            <div class="w-32 h-16 flex items-center justify-center">
+                <img src="images/dazbog.jpg" alt="Client 1" class="max-h-full w-auto object-contain">
+            </div>
+            <!-- Logo 2 -->
+            <div class="w-32 h-16 flex items-center justify-center">
+                <img src="images/dazbog.jpg" alt="Client 2" class="max-h-full w-auto object-contain">
+            </div>
         </div>
+
         <blockquote class="bg-blue-50 p-10 rounded-3xl max-w-2xl mx-auto italic text-slate-700">
-            "ZYXAB completely transformed our workflow. Their team is professional, fast, and they truly care about our
+            "Lucid Tech completely transformed our workflow and helped us with our digital transformation. Their team is
+            professional,
+            fast, and they truly care about
+            our
             growth."
             <footer class="mt-4 font-bold text-brand">— A Satisfied Client</footer>
         </blockquote>
