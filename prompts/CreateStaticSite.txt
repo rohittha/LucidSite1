@@ -1,0 +1,20 @@
+I am building a website for a new custom software development company called ZYXAB Inc.
+Please act as a professional web developer and provide the code for a multi-page website using HTML and Tailwind CSS (via CDN). The site must be responsive and follow a professional, modern, and clean aesthetic.
+Please provide the code for the following three pages/sections:
+1. Main Landing Page (MVP):
+Hero: A strong headline: 'Making it easy for clients to scale their operations.', subheadline: 'Easy to leverage digital tools interface easily with clients.', and a 'Book a Consultation' button.
+Services: 3 cards covering: Custom Software Services, Software Products , and SaaS solutions.
+About Preview: A brief 2 sentence summary for text - We are a team of experienced professionals who can provide software solutions ranging from UI/UX, Software and Agentic AI solutions.
+Contact Form: A professional form with fields for Name, Email, and Project Description.
+Sticky Navbar: Including links to Home, About, and Contact.
+2. About Us Page:
+A dedicated section explaining our mission: 'Helping clients scale business with software and AI.'.
+A 'Why Choose Us' section with 3 bullet points highlighting our expertise in UI/UX, Software and AI.
+3. 404 Page:
+A minimalist, professional, and friendly 404 page.
+Include a 'Back to Home' button and a helpful message like 'Sorry, the page you are looking for doesn't exist.'
+Design Requirements:
+Use brand color (#524FA1).
+Use Tailwind's utility classes to ensure full responsiveness (mobile-first design). Pages should be responsive in mobile, tab and desktop any screen and any resolution.
+Make the navigation and footer consistent across all pages.
+Keep the HTML, CSS (Tailwind classes), and script tags organized so I can easily copy them into separate files (index.html, about.html, 404.html).

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYXAB Inc. | Scaling Made Simple</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Your custom lighter indigo
+                        brand: {
+                            DEFAULT: '#524FA1',
+                            light: '#6a67b5',
+                            dark: '#3f3d7d',
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Navbar: Uses brand-DEFAULT -->
+    <nav class="sticky top-0 bg-brand text-white p-4 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight text-white">ZYXAB<span
+                    class="text-blue-200">.inc</span></a>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#services" class="hover:text-blue-200 transition">Services</a>
+                <a href="#process" class="hover:text-blue-200 transition">Process</a>
+                <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+                <a href="about.html" class="hover:text-blue-200 transition">About Us</a>
+            </div>
+            <a href="#contact"
+                class="bg-white text-brand px-5 py-2 rounded-full font-bold hover:bg-blue-50 transition">Let's Talk</a>
+        </div>
+    </nav>
+
+    <!-- Hero: Uses brand-DEFAULT to brand-dark gradient -->
+    <header class="py-24 px-6 bg-gradient-to-br from-brand to-brand-dark text-white text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Making it easy to <span class="text-blue-200">scale.</span>
+        </h1>
+        <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">We build digital tools that interface seamlessly with
+            your clients, helping you grow faster without the technical headache.</p>
+        <a href="#contact"
+            class="bg-blue-500 hover:bg-blue-400 text-white px-10 py-4 rounded-xl text-lg font-bold shadow-lg transition transform hover:scale-105">Book
+            a Consultation</a>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-20 container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">What We Do</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
+                <div
+                    class="w-12 h-12 bg-blue-100 text-brand rounded-lg flex items-center justify-center mb-6 font-bold">
+                    01</div>
+                <h3 class="text-2xl font-bold mb-3">Web Development</h3>
+                <p class="text-slate-600">Fast, responsive, and beautiful websites designed to turn visitors into loyal
+                    clients.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
+                <div
+                    class="w-12 h-12 bg-blue-100 text-brand rounded-lg flex items-center justify-center mb-6 font-bold">
+                    02</div>
+                <h3 class="text-2xl font-bold mb-3">Mobile Apps</h3>
+                <p class="text-slate-600">Native and cross-platform apps that keep your business in your customers'
+                    pockets.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brand transition">
+                <div
+                    class="w-12 h-12 bg-blue-100 text-brand rounded-lg flex items-center justify-center mb-6 font-bold">
+                    03</div>
+                <h3 class="text-2xl font-bold mb-3">Cloud Consulting</h3>
+                <p class="text-slate-600">Infrastructure that scales with you, ensuring your business never misses a
+                    beat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process: Uses brand-DEFAULT -->
+    <section id="process" class="py-20 bg-brand text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Our Simple Process</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl mb-4 text-blue-200 font-black">01</div>
+                    <h4 class="font-bold mb-2">Discovery</h4>
+                    <p class="text-blue-100 text-sm">We listen to your goals and define the scope.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4 text-blue-200 font-black">02</div>
+                    <h4 class="font-bold mb-2">Design</h4>
+                    <p class="text-blue-100 text-sm">Creating intuitive, user-friendly blueprints.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4 text-blue-200 font-black">03</div>
+                    <h4 class="font-bold mb-2">Build</h4>
+                    <p class="text-blue-100 text-sm">Agile development with clean, scalable code.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4 text-blue-200 font-black">04</div>
+                    <h4 class="font-bold mb-2">Launch</h4>
+                    <p class="text-blue-100 text-sm">Deployment and ongoing support for success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-20 container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12">Trusted Partners & Happy Clients</h2>
+        <div class="flex flex-wrap justify-center gap-8 mb-16 opacity-50 grayscale">
+            <div class="text-xl font-bold text-brand">CLIENT LOGO</div>
+            <div class="text-xl font-bold text-brand">CLIENT LOGO</div>
+            <div class="text-xl font-bold text-brand">CLIENT LOGO</div>
+        </div>
+        <blockquote class="bg-blue-50 p-10 rounded-3xl max-w-2xl mx-auto italic text-slate-700">
+            "ZYXAB completely transformed our workflow. Their team is professional, fast, and they truly care about our
+            growth."
+            <footer class="mt-4 font-bold text-brand">— A Satisfied Client</footer>
+        </blockquote>
+    </section>
+
+    <!-- Contact: Button uses brand-DEFAULT -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-xl">
+            <h2 class="text-4xl font-bold text-center mb-8">Let's build something great</h2>
+            <form class="space-y-6">
+                <input type="text" placeholder="Your Name"
+                    class="w-full p-4 border rounded-xl bg-slate-50 focus:ring-2 focus:ring-brand outline-none">
+                <input type="email" placeholder="Email Address"
+                    class="w-full p-4 border rounded-xl bg-slate-50 focus:ring-2 focus:ring-brand outline-none">
+                <textarea placeholder="Tell us about your project..." rows="4"
+                    class="w-full p-4 border rounded-xl bg-slate-50 focus:ring-2 focus:ring-brand outline-none"></textarea>
+                <button class="w-full bg-brand text-white p-4 rounded-xl font-bold hover:bg-brand-dark transition">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer: Uses brand-DEFAULT -->
+    <footer class="py-8 bg-brand text-center text-blue-100 text-sm">
+        &copy; 2026 ZYXAB Inc. All rights reserved.
+    </footer>
+</body>
+
+</html>
