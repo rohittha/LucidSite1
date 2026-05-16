@@ -29,50 +29,47 @@
     </script>
 </head>
 <!-- Navbar -->
-<!-- Navbar -->
-<nav class="sticky top-0 z-50 shadow-sm border-b border-slate-200">
-    <div class="flex items-stretch">
+<nav class="sticky top-0 z-50 shadow-sm border-b border-slate-200 bg-white/50 backdrop-blur-sm">
+    <div class="container mx-auto px-4 flex justify-between items-center h-16">
 
-        <!-- Extreme Left: Logo with White Background -->
-        <a href="index.html" class="bg-white p-4 flex items-center">
+        <!-- Logo (Left) -->
+        <a href="index.html" class="flex items-center">
             <img src="images/logo.jpg" alt="Lucid Tech" class="h-10 w-auto">
         </a>
 
-        <!-- Center & Right: The rest of the nav with 50% opacity -->
-        <div class="flex-1 flex justify-between items-center bg-white/50 backdrop-blur-sm px-6">
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 font-medium opacity-50">
+        <!-- Right Side: Menu Button (and Desktop links) -->
+        <div class="flex items-center gap-4">
+            <!-- Desktop Menu (Hidden on mobile) -->
+            <div class="hidden md:flex space-x-8 font-medium opacity-50 mr-4">
                 <a href="index.html#services" class="hover:text-brand transition">What we do</a>
                 <a href="index.html#process" class="hover:text-brand transition">Our process</a>
                 <a href="about.html" class="hover:text-brand transition">About Us</a>
             </div>
 
-            <!-- Extreme Right: CTA & Mobile Button -->
-            <div class="flex items-center gap-4">
-                <!-- Updated Button: White background, brand border, brand text, hover fills with brand color -->
-                <a href="index.html#contact"
-                    class="hidden md:block bg-white border-2 border-brand text-brand px-5 py-2 rounded-full font-bold hover:bg-brand hover:text-white transition-all duration-300">
-                    Contact Us
-                </a>
+            <!-- CTA (Hidden on mobile) -->
+            <a href="index.html#contact"
+                class="hidden md:block bg-white border-2 border-brand text-brand px-5 py-2 rounded-full font-bold hover:bg-brand hover:text-white transition-all duration-300">
+                Contact Us
+            </a>
 
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
+            <!-- Mobile Hamburger Button (Always visible on mobile) -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
         </div>
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-        class="hidden md:hidden mt-4 flex flex-col space-y-4 bg-white p-4 rounded-xl border border-slate-200 shadow-xl">
-        <a href="index.html#services" class="block py-2 hover:text-brand">What we do</a>
-        <a href="index.html#process" class="block py-2 hover:text-brand">Our process</a>
-        <a href="about.html" class="block py-2 hover:text-brand">About Us</a>
-        <a href="index.html#contact" class="bg-brand text-white text-center py-3 rounded-full font-bold">Contact Us</a>
+        class="hidden md:hidden absolute top-full left-0 right-0 bg-white p-4 border-b border-slate-200 shadow-xl">
+        <a href="index.html#services" class="block py-3 hover:text-brand">What we do</a>
+        <a href="index.html#process" class="block py-3 hover:text-brand">Our process</a>
+        <a href="about.html" class="block py-3 hover:text-brand">About Us</a>
+        <a href="index.html#contact"
+            class="block mt-4 bg-brand text-white text-center py-3 rounded-full font-bold">Contact Us</a>
     </div>
 </nav>
 
@@ -222,35 +219,64 @@
         </div>
         <!-- Logo 2 -->
         <div class="w-32 h-16 flex items-center justify-center">
+            <!-- Example of a modern, clean, premium structure -->
             <svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Define styles for the text -->
                 <style>
-                    .brand-main {
+                    .font-main {
                         font-family: sans-serif;
                         font-weight: 800;
-                        font-size: 40px;
-                        fill: #524FA1;
-                        /* Uses your brand color */
+                        font-size: 42px;
+                        /* Increased size for better presence */
+                    }
+
+                    .brand-red {
+                        fill: #E11D48;
+                        /* Modern Professional Red */
+                    }
+
+                    .brand-stack {
+                        fill: #1F2937;
+                        /* Dark Slate Gray for sophistication */
                     }
 
                     .brand-sub {
                         font-family: sans-serif;
                         font-weight: 400;
-                        font-size: 30px;
-                        fill: #333333;
+                        font-size: 16px;
+                        fill: #6B7280;
+                        /* Muted gray for the subtitle */
+                        letter-spacing: 6px;
+                        /* Increased spacing for premium look */
+                        text-transform: uppercase;
                     }
                 </style>
 
-                <!-- REDstack text -->
-                <text x="0" y="40" class="brand-main">REDstack</text>
+                <!-- REDstack -->
+                <text x="0" y="50" class="font-main">
+                    <tspan class="brand-red">RED</tspan>
+                    <tspan class="brand-stack">stack</tspan>
+                </text>
 
-                <!-- Energy India text -->
-                <text x="0" y="75" class="brand-sub">Energy India</text>
+                <!-- ENERGY INDIA -->
+                <text x="5" y="82" class="brand-sub">Energy India</text>
             </svg>
         </div>
         <!-- Logo 3 -->
         <div class="w-32 h-16 flex items-center justify-center">
-            <img src="images/dazbog.jpg" alt="Client 3" class="max-h-full w-auto object-contain">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 674 184" fill="none">
+                <g fill-rule="evenodd" clip-path="url(#a)" clip-rule="evenodd">
+                    <path fill="#1D60E5"
+                        d="M0 92C0 41.124 41.124 0 92 0s92 41.124 92 92-41.124 92-92 92S0 142.876 0 92Zm111.981 0L46 138V46l65.981 46ZM138 138h-15.525V46H138v92Z" />
+                    <path fill="#000"
+                        d="m638.67 77.11 8.75-17.852h13.828l-11.992 17.851H638.67ZM271.995 64h-13.079l-.74 43.872c-.045 2.806-.706 5.297-1.984 7.475-1.255 2.177-3.026 3.894-5.312 5.151-2.264 1.235-4.92 1.852-7.968 1.852-3.049 0-5.694-.617-7.935-1.852-2.242-1.257-3.968-2.974-5.178-5.151-1.188-2.178-1.76-4.669-1.715-7.475l.74-43.872h-13.079l-.74 44.983c-.09 4.961.998 9.316 3.261 13.064 2.287 3.749 5.515 6.678 9.684 8.788 4.191 2.11 9.111 3.165 14.76 3.165 5.626 0 10.557-1.055 14.794-3.165 4.258-2.11 7.587-5.039 9.985-8.788 2.421-3.748 3.677-8.103 3.766-13.064l.74-44.983Zm19.558 68.956.504-30.202c.045-2.402.527-4.456 1.446-6.161.941-1.706 2.219-3.008 3.833-3.906 1.614-.898 3.452-1.347 5.514-1.347 3.071 0 5.458.954 7.162 2.862 1.703 1.908 2.521 4.546 2.454 7.912l-.504 30.842h12.81l.538-32.929c.089-4.108-.583-7.61-2.018-10.505-1.434-2.896-3.474-5.107-6.119-6.633-2.622-1.549-5.716-2.323-9.28-2.323-3.833 0-7.083.864-9.75 2.592-2.667 1.706-4.606 4.03-5.817 6.97h-.639l.169-8.889h-12.239l-.841 51.717h12.777Zm40.992 0L333.688 64h26.226c5.267 0 9.694.92 13.281 2.76 3.586 1.842 6.287 4.434 8.103 7.779 1.838 3.322 2.712 7.205 2.622 11.65-.067 4.466-1.076 8.327-3.026 11.582-1.95 3.255-4.774 5.769-8.473 7.542-.363.172-.734.336-1.112.491l14.359 27.152H371.11l-12.961-25.017h-12.105l-.42 25.017h-13.079Zm24.713-35.757h-11.033l.374-22.324h10.961c3.026 0 5.503.45 7.431 1.347 1.927.876 3.34 2.155 4.236 3.839.919 1.683 1.356 3.726 1.311 6.128-.022 2.401-.515 4.422-1.479 6.06-.964 1.616-2.421 2.85-4.371 3.704-1.95.83-4.427 1.246-7.43 1.246Zm40.63 33.535c3.744 2.155 8.227 3.232 13.449 3.232 4.08 0 7.711-.617 10.894-1.852 3.183-1.257 5.805-3.019 7.868-5.286 2.062-2.289 3.474-4.96 4.236-8.013l-11.902-1.179c-.56 1.415-1.356 2.604-2.388 3.569-1.031.966-2.252 1.695-3.664 2.189-1.412.494-2.97.741-4.674.741-2.6 0-4.853-.539-6.758-1.616-1.883-1.1-3.329-2.672-4.337-4.714-.989-2.025-1.472-4.449-1.448-7.273h35.743l.067-3.805c.067-4.489-.493-8.372-1.681-11.65-1.188-3.3-2.869-6.015-5.044-8.148a20.214 20.214 0 0 0-7.497-4.78c-2.847-1.056-5.896-1.583-9.146-1.583-4.976 0-9.324 1.133-13.045 3.4-3.721 2.245-6.635 5.376-8.742 9.394-2.107 4.018-3.194 8.687-3.261 14.007-.112 5.432.818 10.146 2.79 14.141 1.973 3.973 4.82 7.049 8.54 9.226Zm1.446-28.62a13.195 13.195 0 0 1 1.614-5.488 12.214 12.214 0 0 1 4.337-4.478c1.838-1.145 3.957-1.717 6.355-1.717 2.264 0 4.236.505 5.917 1.515a10.28 10.28 0 0 1 3.934 4.142c.919 1.75 1.368 3.76 1.345 6.026h-23.502Zm82.516-6.902-11.701 1.111a8.277 8.277 0 0 0-1.513-3.131c-.739-.965-1.737-1.74-2.992-2.323-1.255-.606-2.791-.91-4.606-.91-2.466 0-4.539.54-6.22 1.617-1.681 1.055-2.533 2.435-2.556 4.141-.022 1.414.493 2.582 1.547 3.502 1.076.898 2.88 1.638 5.413 2.222l8.944 1.886c4.909 1.032 8.551 2.704 10.927 5.016 2.398 2.29 3.564 5.298 3.497 9.024-.068 3.277-1.076 6.173-3.026 8.687-1.928 2.491-4.573 4.433-7.935 5.825-3.362 1.391-7.229 2.087-11.6 2.087-6.478 0-11.656-1.358-15.533-4.074-3.856-2.716-6.108-6.487-6.758-11.313l12.507-1.01c.471 2.267 1.547 3.984 3.228 5.152 1.703 1.144 3.911 1.717 6.623 1.717 2.802 0 5.066-.561 6.792-1.684 1.726-1.145 2.6-2.57 2.623-4.276.022-1.414-.516-2.581-1.614-3.502-1.099-.92-2.813-1.627-5.144-2.121l-8.81-1.852c-4.953-1.032-8.618-2.783-10.994-5.252-2.354-2.469-3.497-5.612-3.429-9.428.044-3.21.963-5.993 2.757-8.35 1.815-2.357 4.326-4.175 7.531-5.454 3.205-1.302 6.904-1.953 11.095-1.953 6.209 0 11.073 1.324 14.592 3.973 3.542 2.626 5.66 6.184 6.355 10.673Zm39.362-13.973-.505 29.899c-.022 2.537-.571 4.647-1.647 6.33-1.076 1.684-2.432 2.952-4.069 3.805-1.636.853-3.351 1.279-5.144 1.279-2.846 0-5.122-.943-6.825-2.828-1.704-1.886-2.544-4.433-2.522-7.643l.538-30.842h-12.81l-.538 32.929c-.067 4.108.605 7.61 2.017 10.505 1.413 2.896 3.408 5.118 5.985 6.667 2.578 1.526 5.559 2.29 8.944 2.29 3.878 0 7.173-.921 9.885-2.761 2.712-1.841 4.673-4.232 5.884-7.172h.538l-.169 9.259h12.373l.875-51.717h-12.81Zm19.415 51.717.84-51.717h12.239l-.168 8.889h.638c1.121-2.986 2.937-5.32 5.447-7.003 2.533-1.706 5.526-2.56 8.977-2.56 3.52 0 6.478.865 8.877 2.593 2.398 1.706 4.046 4.03 4.942 6.97h.538c1.166-2.896 3.127-5.208 5.884-6.936 2.779-1.75 6.052-2.626 9.818-2.626 4.752 0 8.607 1.515 11.566 4.545 2.959 3.008 4.393 7.374 4.303 13.098l-.605 34.747h-12.776l.538-32.592c.045-3.098-.751-5.388-2.387-6.87-1.614-1.48-3.632-2.221-6.052-2.221-2.847 0-5.077.898-6.691 2.693-1.614 1.774-2.443 4.086-2.488 6.936l-.538 32.054h-12.508l.572-33.03c.022-2.626-.729-4.725-2.253-6.296-1.524-1.572-3.541-2.357-6.052-2.357-1.703 0-3.261.437-4.673 1.313-1.39.853-2.511 2.054-3.363 3.603-.851 1.548-1.288 3.355-1.311 5.42l-.538 31.347h-12.776Zm90.282-2.222c3.744 2.155 8.226 3.232 13.449 3.232 4.08 0 7.711-.617 10.894-1.852 3.183-1.257 5.805-3.019 7.867-5.286 2.063-2.289 3.475-4.96 4.237-8.013l-11.903-1.179c-.56 1.415-1.356 2.604-2.387 3.569-1.031.966-2.252 1.695-3.665 2.189-1.412.494-2.969.741-4.673.741-2.6 0-4.853-.539-6.758-1.616-1.883-1.1-3.329-2.672-4.337-4.714-.989-2.025-1.472-4.449-1.448-7.273h35.742l.068-3.805c.067-4.489-.494-8.372-1.681-11.65-1.188-3.3-2.87-6.015-5.044-8.148a20.218 20.218 0 0 0-7.498-4.78c-2.846-1.056-5.895-1.583-9.145-1.583-4.976 0-9.324 1.133-13.045 3.4-3.721 2.245-6.635 5.376-8.742 9.394-2.107 4.018-3.194 8.687-3.261 14.007-.113 5.432.818 10.146 2.79 14.141 1.973 3.973 4.819 7.049 8.54 9.226Zm1.445-28.62a13.196 13.196 0 0 1 1.615-5.488 12.206 12.206 0 0 1 4.337-4.478c1.838-1.145 3.956-1.717 6.355-1.717 2.264 0 4.236.505 5.917 1.515a10.28 10.28 0 0 1 3.934 4.142c.919 1.75 1.367 3.76 1.345 6.026h-23.503Z" />
+                </g>
+                <defs>
+                    <clipPath id="a">
+                        <path fill="#fff" d="M0 0h674v184H0z" />
+                    </clipPath>
+                </defs>
+            </svg>
         </div>
     </div>
 
